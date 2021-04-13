@@ -19,9 +19,9 @@ The program can run in two ways. Before we run the program we need to create a v
   
  ## Run from the command line 
  meme.py has codes to run the application from the command line. It takes three optional arguments:
-  --path: Path to the image file
-  --body: Quote body to add to the image
-  --author: Quote author to add to the image
+ * --path: Path to the image file
+ * --body: Quote body to add to the image
+ * --author: Quote author to add to the image
 
 ## Run flask app
  * From root directory src run flask with the command $python app.py
