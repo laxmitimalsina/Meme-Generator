@@ -10,17 +10,18 @@ Meme Generator has the following functionalities:
 * Loads quotes from a variety of filetypes(CSVs, PDF, Word Documents)
 * Loads, manipulates, and saves images
 * Has two user input interface- web service and command-line tool
-* ## How to run the program 
+
+## How to run the program 
 The program can run in two ways. Before we run the program we need to create a virtual environment.
-*Navigate the root directory and create a virtual environment.--$ python3 -m venv name
-*Source activate the virtual environment --$ source env/bin/activate
-*Install all the dependencies from the requirements.txt --$ pip install -r requirements.txt
+* Navigate the root directory and create a virtual environment.--$ python3 -m venv name
+* Source activate the virtual environment --$ source env/bin/activate
+* Install all the dependencies from the requirements.txt --$ pip install -r requirements.txt
   
-  ## Run from the command line 
-  meme.py has codes to run the application from the command line. It takes three optional arguments:
-   --path: Path to the image file
-   --body: Quote body to add to the image
-   --author: Quote author to add to the image
+ ## Run from the command line 
+ meme.py has codes to run the application from the command line. It takes three optional arguments:
+  --path: Path to the image file
+  --body: Quote body to add to the image
+  --author: Quote author to add to the image
 
 ## Run flask app
  * From root directory src run flask with the command $python app.py
