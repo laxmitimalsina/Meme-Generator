@@ -1,5 +1,6 @@
 # Motivational Meme Generator 
-## Introduction 
+## Introduction ![meme_generator_demo](https://user-images.githubusercontent.com/65842436/114586160-a7d06280-9c84-11eb-85a8-d9bfed9b214b.gif)
+
 
 ## Meme Generator overview
 Goal of Meme Generator is to build a "meme generator" application, to generate memes dynamically that includes image with an quote. It handel the quotes from different file formats.
