@@ -13,9 +13,9 @@ Meme Generator has the following functionalities:
 
 ## How to run the program 
 The program can run in two ways. Before we run the program we need to create a virtual environment.
-* Navigate the root directory and create a virtual environment.--$ python3 -m venv name
-* Source activate the virtual environment --$ source env/bin/activate
-* Install all the dependencies from the requirements.txt --$ pip install -r requirements.txt
+* Navigate the root directory and create a virtual environment.`$ python3 -m venv name`
+* Source activate the virtual environment `$ source env/bin/activate`
+* Install all the dependencies from the requirements.txt `$ pip install -r requirements.txt`
   
  ## Run from the command line 
  meme.py has codes to run the application from the command line. It takes three optional arguments:
