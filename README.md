@@ -24,7 +24,7 @@ The program can run in two ways. Before we run the program we need to create a v
  * --author: Quote author to add to the image
 ## Add your own image and quote 
 * To make your own custom meme add image to `src/_data/DogQuotes` folder and add quotes on `src/_data/DogQuotes` on any four file format PDF, csv, docx, txt 
-* Add static folder and a tmp folder while using the application to save the generated meme
+* Add `static` folder and a `tmp` folder while using the application to save the generated meme
 
 
 ## Run flask app
