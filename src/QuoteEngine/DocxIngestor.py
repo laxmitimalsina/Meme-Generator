@@ -1,3 +1,4 @@
+"""Pdf file parser."""
 from typing import List
 
 import docx
@@ -7,12 +8,13 @@ from .Quote import QuoteModel
 
 
 class DocxIngestor(IngestorInterface):
-    """Handels Docx file and extracts quotes from docx file """
+    """Handels Docx file and extracts quotes from docx file."""
 
     allowed_extensions = ["docx"]
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse path if its on allowed_extensions or not and returns list."""
         if not cls.can_ingest(path):
             raise Exception("cannot ingest exception")
 

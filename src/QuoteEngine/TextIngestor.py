@@ -1,3 +1,4 @@
+"""Handels text file format."""
 from logging import exception
 from typing import List
 
@@ -6,12 +7,13 @@ from .Quote import QuoteModel
 
 
 class TextIngestor(IngestorInterface):
-    """ handels files with .txt extention and extracts quotes"""
+    """Handel files with .txt extention and extracts quotes."""
 
     allowed_extensions = ["txt"]
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Handle pdf files and extracts quotes from pdf file."""
         if not cls.can_ingest(path):
             raise Exception("not able to ingest file")
 

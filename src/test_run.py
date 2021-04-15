@@ -1,4 +1,5 @@
-# # from QuoteEngine import TextIngestor, PDFIngestor, CSVIngestor, DocxIngestor
+#  from QuoteEngine import CSVIngestor, DocxIngestor,
+#   PDFIngestor, TextIngestor
 
 
 # from PIL import Image
@@ -26,6 +27,7 @@
 
 # print(
 #     captioner.make_meme(
-#         "./_data/photos/dog/xander_1.jpg", "this is monkey", "banur", 600
+#         "./_data/photos/dog/xander_1.jpg",
+#  "this is monkey", "banur", 600
 #     )
 # )

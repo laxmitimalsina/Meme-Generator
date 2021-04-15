@@ -1,23 +1,28 @@
-from file_exception import file_exception
+"""Takes a image and adds caption to the image."""
+
 import textwrap
 import uuid
-import os
 from PIL import Image, ImageDraw, ImageFont
 
 
 class ImageCaptioner:
-    """This class has following fuctionalities to load image,
-    resize image, add caption,save modified image
+    """This class has following fuctionalities to load image.
+
+    Resize image, add caption,save modified image
     """
 
     def __init__(self, export_dir):
+        """Instantiate ImageCaptioner class."""
         self.export_dir = export_dir
-        self.extensions = [".jpg", ".png"]
 
     def make_meme(self, img_path, text, author, width=500) -> str:
-        """load image using PIL library, resize image,
-        add text using quote body, author and save image"""
+        """Load image using PIL library,resize image.
 
+        Add text using quote body, author and save image,
+        the path where its saved will be returned.
+        If file not found will raise FileNotFound error and if
+        unsupported file format is used, raise UnidentifiedImageError.
+        """
         image = Image.open(img_path)
 
         if width is not None:
@@ -39,13 +44,11 @@ class ImageCaptioner:
                 )
                 y_text += line_height
 
-            author_font = ImageFont.truetype("./_data/Font/Amatic-Bold.ttf", size=30)
+            author_font = ImageFont.truetype("./_data/Font/Amatic-Bold.ttf", size=30,)
             # draw.text((20, 30), text, font=font, fill="white")
             draw.text(
-                (width - 200, height - 100), author, font=author_font, fill="white"
+                (width - 200, height - 100), author, font=author_font, fill="white",
             )
-            if not os.path.exists(self.export_dir):
-                raise file_exception.InvalidFilePath(self.export_dir)
             file_name = uuid.uuid4().hex
             out_path = f"{self.export_dir}/{file_name}.jpg"
             image.save(out_path)

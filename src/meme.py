@@ -1,7 +1,11 @@
+"""Meme generator that gives out path and quote."""
+
 import argparse
 import os
 import random
 import typing
+
+import PIL
 
 from Ingestor import Ingestor
 from MemeGenerator import ImageCaptioner as MemeEngine
@@ -9,7 +13,7 @@ from QuoteEngine.Quote import QuoteModel
 
 
 def generate_meme(path=None, body=None, author=None):
-    """ Generate a meme given an path and a quote """
+    """Generate a meme given an path and a quote."""
     img = None
     quote = None
 
@@ -55,4 +59,11 @@ if __name__ == "__main__":
     path = args.path
     body = args.body
     author = args.author
-    print(generate_meme(path, body, author))
+    try:
+        print(generate_meme(path, body, author))
+    except FileNotFoundError as e:
+        print("File not found")
+    except PIL.UnidentifiedImageError as e:
+        print("Cannot read file type, use png or jpg image format")
+    except Exception as e:
+        print("Uhandeled error occurred")

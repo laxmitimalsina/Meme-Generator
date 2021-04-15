@@ -1,3 +1,4 @@
+"""Handels csv file format."""
 from typing import List
 
 import pandas
@@ -9,12 +10,13 @@ from .IngestorInterface import IngestorInterface
 
 
 class CSVIngestor(IngestorInterface):
-    """ handles csv file and extracts quotes"""
+    """Handles csv file and extracts quotes."""
 
     allowed_extensions = ["csv"]
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """Parse path if its on allowed_extensions or not and returns list."""
         if not cls.can_ingest(path):
             raise Exception("can't ingest excepction")
 
@@ -25,4 +27,3 @@ class CSVIngestor(IngestorInterface):
             new_quotes = QuoteModel(row["body"], row["author"])
             quotes.append(new_quotes)
         return quotes
-
