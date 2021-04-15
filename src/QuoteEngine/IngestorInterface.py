@@ -19,6 +19,7 @@ class IngestorInterface(ABC):
     @classmethod
     @abstractmethod
     def parse(cls, path: str) -> List[QuoteModel]:
-        """Is defined so that other child classes using this function can overide the function as per requirement"""
+        """Is defined so that other child classes using
+         this function can overide the function as per requirement"""
         pass
 

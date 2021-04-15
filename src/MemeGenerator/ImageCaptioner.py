@@ -1,17 +1,22 @@
-from PIL import Image, ImageDraw, ImageFont
-import uuid
+from file_exception import file_exception
 import textwrap
+import uuid
+import os
+from PIL import Image, ImageDraw, ImageFont
 
 
 class ImageCaptioner:
-    """ This class has following fuctionalities to load image,resize image, add caption,save modified image
+    """This class has following fuctionalities to load image,
+    resize image, add caption,save modified image
     """
 
     def __init__(self, export_dir):
         self.export_dir = export_dir
+        self.extensions = [".jpg", ".png"]
 
     def make_meme(self, img_path, text, author, width=500) -> str:
-        """load image using PIL library, resize image, add text using quote body, author and save image"""
+        """load image using PIL library, resize image,
+        add text using quote body, author and save image"""
 
         image = Image.open(img_path)
 
@@ -39,8 +44,10 @@ class ImageCaptioner:
             draw.text(
                 (width - 200, height - 100), author, font=author_font, fill="white"
             )
-        file_name = uuid.uuid4().hex
-        out_path = f"{self.export_dir}/{file_name}.jpg"
-        image.save(out_path)
-        return out_path
+            if not os.path.exists(self.export_dir):
+                raise file_exception.InvalidFilePath(self.export_dir)
+            file_name = uuid.uuid4().hex
+            out_path = f"{self.export_dir}/{file_name}.jpg"
+            image.save(out_path)
 
+        return out_path

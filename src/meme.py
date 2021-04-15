@@ -1,7 +1,8 @@
+import argparse
 import os
 import random
-import argparse
 import typing
+
 from Ingestor import Ingestor
 from MemeGenerator import ImageCaptioner as MemeEngine
 from QuoteEngine.Quote import QuoteModel
@@ -14,6 +15,7 @@ def generate_meme(path=None, body=None, author=None):
 
     if path is None:
         images = "./_data/photos/dog/"
+
         imgs = []
         for root, dirs, files in os.walk(images):
             imgs = [os.path.join(root, name) for name in files]

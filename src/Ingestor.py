@@ -1,9 +1,9 @@
 from QuoteEngine import (
-    PDFIngestor,
-    TextIngestor,
     CSVIngestor,
     DocxIngestor,
     IngestorInterface,
+    PDFIngestor,
+    TextIngestor,
 )
 
 
@@ -20,4 +20,3 @@ class Ingestor(IngestorInterface):
                 return ingestor.parse(path)
 
         raise Exception(f"Extension not valid. Must be one of {cls.allowed_extensions}")
-

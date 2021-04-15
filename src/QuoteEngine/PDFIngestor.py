@@ -1,9 +1,10 @@
-from typing import List
-from .IngestorInterface import IngestorInterface
-from .Quote import QuoteModel
-import subprocess
 import os
 import random
+import subprocess
+from typing import List
+
+from .IngestorInterface import IngestorInterface
+from .Quote import QuoteModel
 
 # from pdfminer.high_level import extract_text
 
@@ -39,4 +40,3 @@ class PDFIngestor(IngestorInterface):
         os.remove(tmp)
 
         return quotes
-

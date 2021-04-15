@@ -1,7 +1,8 @@
 from logging import exception
 from typing import List
-from .Quote import QuoteModel
+
 from .IngestorInterface import IngestorInterface
+from .Quote import QuoteModel
 
 
 class TextIngestor(IngestorInterface):
@@ -24,4 +25,3 @@ class TextIngestor(IngestorInterface):
                 quotes.append(new_quote)
 
             return quotes
-
