@@ -36,6 +36,5 @@ The program can run in two ways. Before we run the program we need to create a v
  * Project has 2 modules 
  * QuoteEngine -Loads quotes from variety of filetypes(CSVs, PDF, Word Documents, Textfile )
  * MemeGenerator-Has files to handel image captioning.
-
  Each class and function has a docstring with details on arguments and return.    
  
